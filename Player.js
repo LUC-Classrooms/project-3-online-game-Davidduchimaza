@@ -1,3 +1,11 @@
+function Player(tempX, tempY) {
+  // properties
+  this.x = tempX;
+  this.y = tempY;
+  this.s = .4
+  this.diam = 50;
+  this.angle = 0;
+
 this.display = function () {
   beginShape();
   // Draw cat body
