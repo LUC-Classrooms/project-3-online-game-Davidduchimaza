@@ -46,7 +46,7 @@ function draw() {
 
 function splash() {
   // this is what you would see when the game starts
-  background(234, 221, 202);
+background(220, 200, 255);
   textAlign(CENTER);
   textSize(20);
   fill(0);
@@ -62,7 +62,7 @@ function splash() {
 
 function play() {
   // this is what you see when the game is running 
-  background(115, 194, 251);
+background(180, 230, 180);
   fill(250)
   player1.display(); 
   if(gameTimer.isFinished()){
