@@ -50,7 +50,7 @@ function splash() {
   textAlign(CENTER);
   textSize(20);
   fill(0);
-  text("Collect as Many Bones as You Can!", width / 2, height / 2);
+  text("Collect as many cookies as You Can", width / 2, height / 2);
   textSize(16);
   text("...you have 30 seconds", width/2, height/2+30);
   textSize(12);
