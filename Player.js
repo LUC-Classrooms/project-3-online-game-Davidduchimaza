@@ -45,7 +45,17 @@ this.display = function () {
   line(-20, 10, -10, 20); // Front right leg
   line(10, 10, 0, 20); // Rear left leg
   line(10, 10, 20, 20); // Rear right leg
+  pop(); //dispose of layer
 
-  pop();
-  endShape();
-};
+    endShape();
+  
+  }
+
+
+  this.move = function () {
+//folow the mouse for now
+    this.x = mouseX;
+    this.y = mouseY;
+
+  }
+}
