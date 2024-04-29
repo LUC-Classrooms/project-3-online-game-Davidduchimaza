@@ -1,54 +1,43 @@
-function Player(tempX, tempY) {
-  // properties
-  this.x = tempX;
-  this.y = tempY;
-  this.s = 0.4; // scale
-  this.diam = 50;
-  this.angle = 0;
+this.display = function () {
+  beginShape();
+  // Draw cat body
+  push();
+  translate(this.x, this.y);
+  rotate(this.angle);
+  fill(255, 128, 0); // Orange color
+  ellipse(0, 0, 60, 40); // Cat's body
 
-  this.display = function () {
-    beginShape();
-    // Draw the dog shape
-    push(); // Create a new drawing state
-    translate(this.x, this.y); // Move the origin point
-    rotate(this.angle); // Rotate the dog
+  // Draw cat head
+  ellipse(-25, -15, 30, 30); // Cat's head
+  fill(225); // Black color
+  ellipse(-31, -20, 10, 10); // Left eye
+  ellipse(-19, -20, 10, 10); // Right eye
 
-    // Draw the body
-    fill(255, 204, 153); // Light brown
-    ellipse(0, 0, 100, 80); // Body
+  // black pupil
+  fill(0); //  black color
+  ellipse(-31, -20, 5, 9); // Left eye
+  ellipse(-19, -20, 5, 9); // right eye
 
-    // Draw the head
-    fill(255, 204, 153); // Light brown
-    ellipse(30, -40, 60, 60); // Head
+  fill(0, 150, 0); // Green inside part of the eye
+  ellipse(-31, -20, 2, 11); // Left eye
+  ellipse(-19, -20, 2, 11); // right eye
 
-    // Draw the ears
-    fill(255, 204, 153); // Light brown
-    ellipse(50, -40, 20, 20); // Left ear
-    ellipse(10, -40, 20, 20); // Right ear
+  // Draw nose
+  fill(255, 192, 203); // Pink color
+  triangle(-30, -13, -25, -8, -20, -13); // Nose (pink triangle)
 
-    // Draw the eyes
-    fill(0); // Black
-    ellipse(20, -50, 10, 10); // Left eye
-    ellipse(40, -50, 10, 10); // Right eye
+  // Draw cat ears
+  fill(255, 128, 0); // Orange color
+  triangle(-40, -25, -50, -50, -30, -25); // Left ear
+  triangle(-20, -25, -10, -40, 0, -25); // Right ear
 
-    // Draw the nose
-    fill(0); // Black
-    ellipse(30, -30, 10, 10); // Nose
+  // Draw cat legs
+  stroke(0); // Black color
+  line(-20, 10, -30, 20); // Front left leg
+  line(-20, 10, -10, 20); // Front right leg
+  line(10, 10, 0, 20); // Rear left leg
+  line(10, 10, 20, 20); // Rear right leg
 
-    // Draw the legs
-    fill(255, 204, 153); // Light brown
-    rect(-20, 20, 15, 50); // Front left leg
-    rect(15, 20, 15, 50); // Front right leg
-    rect(-30, 50, 15, 50); // Back left leg
-    rect(25, 50, 15, 50); // Back right leg
-
-    pop(); // Restore original drawing state
-    endShape();
-  };
-
-  this.move = function () {
-    // Follow the mouse
-    this.x = mouseX;
-    this.y = mouseY;
-  };
-}
+  pop();
+  endShape();
+};
